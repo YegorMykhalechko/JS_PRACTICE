@@ -53,38 +53,37 @@
 
 // Задание 4
 
-// const credits = 23580;
+const credits = 23580;
 
-// const pricePerDroid = 3000;
+const pricePerDroid = 3000;
 
-// const inputAmountDroid = prompt('Введите количество...');
+const inputAmountDroid = prompt('Введите количество...');
+console.log(inputAmountDroid);
 
-// let message;
+let message;
 
-// let totalPrice;
+let totalPrice;
 
-// switch (inputAmountDroid) {
-//     case null:
-//         message = 'Отменено пользователем';
-//         alert(message);
-//         break;
+switch (inputAmountDroid) {
+    case null:
+        message = 'Отменено пользователем';
+        alert(message);
+        break;
 
-//     case inputAmountDroid:
-//         totalPrice = inputAmountDroid * pricePerDroid;
-//         console.log(totalPrice);
-//         if (totalPrice > credits) {
-//             message = 'Недостаточно средств на счету!';
-//             alert(message);
-//         } else {
-//             message = `Вы купили ${inputAmountDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`
-//             alert(message);
-//         }
-//         break;
+    case !isNaN(inputAmountDroid) || inputAmountDroid:
+        alert("Введите число...")
+        break;
 
-//     default:
-//         message = 'Неверный ввод...';
-//         alert(message);
-// }
+    default:
+        totalPrice = inputAmountDroid * pricePerDroid;
+        if (totalPrice > credits) {
+            message = 'Недостаточно средств на счету!';
+            alert(message);
+        } else {
+            message = `Вы купили ${inputAmountDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`
+            alert(message);
+        }
+}
 
 
 // Задание 5 
