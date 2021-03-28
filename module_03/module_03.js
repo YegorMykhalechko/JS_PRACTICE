@@ -162,69 +162,72 @@
 
 // Задани7
 // const Transaction = {
-//   DEPOSIT: 'deposit',
-//   WITHDRAW: 'withdraw',
+//     DEPOSIT: 'deposit',
+//     WITHDRAW: 'withdraw',
 // };
 
 
 
 // const account = {
 
-//   balance: 0,
+//     balance: 0,
 
-//   transactions: [],
+//     transactions: [],
 
-//   startId: 1,
-
-
-//   createTransaction(amount, type) {
-//     let id = this.startId;
-//     this.transactions.push({ id, amount, type });
-//     this.startId += 1;
-//   },
+//     startId: 1,
 
 
-//   deposit(amount) {
-//     let type = Transaction.DEPOSIT;
-//     this.balance += amount;
-//     this.createTransaction(amount, type);
-//   },
+//     createTransaction(amount, type) {
+//         let id = this.startId;
+//         this.transactions.push({ id, amount, type });
+//         this.startId += 1;
+//     },
 
 
-//   withdraw(amount) {
-//     if (amount <= this.balance) {
-//       let type = Transaction.WITHDRAW;
-//       this.balance -= amount;
-//       this.createTransaction(amount, type);
-//       return
-//     }
-//     alert(`Cнятие такой суммы не возможно, недостаточно средств`)
-//   },
+//     deposit(amount) {
+//         let type = Transaction.DEPOSIT;
+//         this.balance += amount;
+//         this.createTransaction(amount, type);
+//     },
 
 
-//   getBalance() {
-//     return this.balance;
-//   },
+//     withdraw(amount) {
+//         if (amount <= this.balance) {
+//             let type = Transaction.WITHDRAW;
+//             this.balance -= amount;
+//             this.createTransaction(amount, type);
+//             return
+//         };
+//         alert(`Cнятие такой суммы не возможно, недостаточно средств`);
+//     },
 
 
-//   getTransactionDetails(id) {
-//     for (let objTransaction of this.transactions) {
-//       if (objTransaction.id === id) {
-//         return objTransaction;
-//       }
-//     }
-//   },
+//     getBalance() {
+//         return this.balance;
+//     },
 
 
-//   getTransactionTotal(type) {
-//     let total = 0;
-//     for (let objTransaction of this.transactions) {
-//       if (objTransaction.type === type) {
-//         total += objTransaction.amount
-//       }
-//     }
-//     return total;
-//   },
+//     getTransactionDetails(id) {
+//         for (let objTransaction of this.transactions) {
+//             if (objTransaction.id === id) {
+//                 const keys = Object.keys(objTransaction);
+//                  for (const key of keys) {
+//                     console.log (`Детали транзакции: ${key}: ${objTransaction[key]}`);
+//                 };
+//             };
+//         };
+//     },
+
+
+//     getTransactionTotal(type) {
+//         let total = 0;
+//         for (let objTransaction of this.transactions) {
+//             if (objTransaction.type === type) {
+//                 total += objTransaction.amount
+//             };
+//         };
+//         return console.log(`Сумма всех транзакций ${type} = ${total}`);
+//     },
 // };
 
 // account.deposit(100);
@@ -236,7 +239,6 @@
 // account.withdraw(40);
 // console.log('Баланс после снятия 40 = ' + account.getBalance());
 
-// console.log(`Детали транзакции: `);
-// console.log(account.getTransactionDetails(1));
+// account.getTransactionDetails(1);
 
-// console.log('Сумма всех транзакций этого типа: ' + account.getTransactionTotal(Transaction.DEPOSIT));
+// account.getTransactionTotal(Transaction.DEPOSIT);
