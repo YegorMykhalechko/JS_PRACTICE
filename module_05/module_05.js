@@ -65,14 +65,15 @@
 //   };
 
 //   addItem(item) {
-//     return items.push(item);
+//     this.items.push(item);
 //   };
 
 //   removeItem(item) {
-//     const idx = items.indexOf(item);
-//     if (idx) {
-//       items.splice(idx, 1);
-//     };
+//     // const idx = items.indexOf(item);
+//     // if (idx) {
+//     //   items.splice(idx, 1);
+//     // };
+//     this.items = items.filter(artefact => artefact !== item);
 //   };
 // };
 
@@ -140,16 +141,17 @@ class Car {
   };
 
   static getSpecs(car) {
+    // console.log({...car});
     console.log(car);
   };
 
-  get price() {
-    return this._price;
-  };
+  // get price() {
+  //   return this._price;
+  // };
 
-  set price(newPrice) {
-    return this._price = newPrice;
-  };
+  // set price(newPrice) {
+  //   return this._price = newPrice;
+  // };
 
   turnOn() {
     this.isOn = true;
