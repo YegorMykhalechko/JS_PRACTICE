@@ -59,14 +59,14 @@ const itemThird = createBlockThird();
 const categories = document.querySelector('ul');
 categories.append(itemFirst, itemSecond, itemThird);
 
-// const task = document.querySelectorAll('li.item');
-// console.log(`В списке ${task.length} категории.`);
+const taskFirst = document.querySelectorAll('li.item');
+console.log(`В списке ${taskFirst.length} категории.`);
 
-// const task = document.querySelectorAll('h2');
-// task.forEach(item => {
-//     console.log(item.firstChild);
-//     console.log(item.nextSibling.children.length);
-// })
+const taskSecond = document.querySelectorAll('h2');
+taskSecond.forEach(item => {
+    console.log(item.firstChild);
+    console.log(item.nextSibling.children.length);
+})
 
 
 
