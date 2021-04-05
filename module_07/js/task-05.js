@@ -4,14 +4,12 @@ inputName.addEventListener('input', rename);
 
 const nameOutput = document.querySelector('#name-output');
 
-function rename(name){
-    if (name.target.value === ''){
+function rename(e){
+    if (e.target.value === ''){
     nameOutput.textContent = 'незнакомец';
     return
     }
-    nameOutput.textContent = name.target.value;
-    console.log(nameOutput.textContent)
-    
+    nameOutput.textContent = e.target.value;
 }
 
 
